@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kevin y Chesca — Tarea 1</title>
+    <meta
+      name="description"
+      content="Primera tarea del discipulado prematrimonial de Kevin y Chesca."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231f6570'/><text x='50' y='61' text-anchor='middle' font-size='38' fill='white'>AN</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">AN</span>
+          <div>
+            <strong>All Nations Church</strong>
+            <span>Discipulado prematrimonial</span>
+          </div>
+        </div>
+        <a class="primary-link" href="#homeworkForm">Comenzar</a>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Tarea 1 · Fundamentos</p>
+          <h1 id="page-title">Amor, expectativas y una historia <span>mayor</span></h1>
+          <p class="lead">
+            Esta tarea les ayudará a poner en palabras lo que esperan, lo que temen y las
+            preguntas espirituales que vale la pena explorar juntos.
+          </p>
+          <div class="scripture">
+            <strong>1 Juan 4:19</strong>
+            <span>Amamos porque Dios nos amó primero.</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <p>Ritmo recomendado</p>
+          <ol>
+            <li>30–40 minutos por separado</li>
+            <li>10 minutos para conversar</li>
+            <li>Enviar cada respuesta en privado</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Antes de comenzar</h2>
+        <div class="privacy-banner">
+          <strong>No buscamos respuestas “correctas”.</strong>
+          <p>
+            Pueden creer, dudar, discrepar o decir “no entiendo”. La honestidad nos ayuda más
+            que una respuesta religiosa aprendida.
+          </p>
+        </div>
+        <ol>
+          <li>Completen las secciones individuales sin consultar la respuesta del otro.</li>
+          <li>La página guarda automáticamente en este navegador.</li>
+          <li>La respuesta no se sube a internet.</li>
+          <li>Kevin la comparte con Gianpaolo; Chesca la comparte con Karina.</li>
+          <li>La última conversación se hace juntos, después de terminar individualmente.</li>
+        </ol>
+      </section>
+
+      <form id="homeworkForm" autocomplete="off">
+        <section class="card">
+          <p class="section-number">Parte 1</p>
+          <h2>¿Quién está respondiendo?</h2>
+          <label>
+            Nombre
+            <select name="name" required>
+              <option value="">Selecciona tu nombre</option>
+              <option>Kevin</option>
+              <option>Chesca</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="card accent">
+          <p class="section-number">Parte 2</p>
+          <h2>Lo que espero y lo que me preocupa</h2>
+          <p>
+            Ya viven muchas experiencias de pareja. Piensen específicamente en qué creen que
+            cambiará —por dentro o por fuera— después de casarse.
+          </p>
+          <label>
+            Una cosa que espero que el matrimonio me dé es…
+            <textarea name="marriageHope" required></textarea>
+          </label>
+          <label>
+            ¿Por qué es importante para mí esa esperanza?
+            <textarea name="hopeWhy"></textarea>
+          </label>
+          <label>
+            Una cosa que me pone nervioso/a acerca del matrimonio es…
+            <textarea name="marriageFear" required></textarea>
+          </label>
+          <label>
+            Cuando aparece ese temor, ¿qué necesito de mi pareja?
+            <textarea name="fearNeed"></textarea>
+          </label>
+          <label>
+            ¿Qué vi en mi familia o en relaciones anteriores que influye en esta respuesta?
+            <textarea name="familyInfluence"></textarea>
+          </label>
+        </section>
+
+        <section class="card">
+          <p class="section-number">Parte 3</p>
+          <h2>Cómo doy y recibo amor</h2>
+          <p>
+            Las personas suelen expresar amor de maneras distintas. Escoge las dos formas que
+            más te hacen sentir amado/a.
+          </p>
+          <fieldset>
+            <legend>Mis dos formas principales de recibir amor</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="checkbox" name="receiveLove" value="Palabras de afirmación" /> Palabras de afirmación</label>
+              <label class="choice"><input type="checkbox" name="receiveLove" value="Tiempo de calidad" /> Tiempo de calidad</label>
+              <label class="choice"><input type="checkbox" name="receiveLove" value="Actos de servicio" /> Actos de servicio</label>
+              <label class="choice"><input type="checkbox" name="receiveLove" value="Regalos con significado" /> Regalos con significado</label>
+              <label class="choice"><input type="checkbox" name="receiveLove" value="Contacto físico afectuoso" /> Contacto físico afectuoso</label>
+            </div>
+          </fieldset>
+          <label>
+            Describe una ocasión reciente en la que te sentiste especialmente amado/a.
+            <textarea name="feltLovedExample"></textarea>
+          </label>
+          <fieldset>
+            <legend>¿Cuáles crees que son las dos formas principales de tu pareja?</legend>
+            <div class="choice-grid">
+              <label class="choice"><input type="checkbox" name="partnerLove" value="Palabras de afirmación" /> Palabras de afirmación</label>
+              <label class="choice"><input type="checkbox" name="partnerLove" value="Tiempo de calidad" /> Tiempo de calidad</label>
+              <label class="choice"><input type="checkbox" name="partnerLove" value="Actos de servicio" /> Actos de servicio</label>
+              <label class="choice"><input type="checkbox" name="partnerLove" value="Regalos con significado" /> Regalos con significado</label>
+              <label class="choice"><input type="checkbox" name="partnerLove" value="Contacto físico afectuoso" /> Contacto físico afectuoso</label>
+            </div>
+          </fieldset>
+          <label>
+            Una manera concreta de amar a mi pareja en su lenguaje esta semana será…
+            <textarea name="loveAction"></textarea>
+          </label>
+        </section>
+
+        <section class="card gospel-card">
+          <p class="section-number">Parte 4</p>
+          <h2>La historia cristiana en cuatro movimientos</h2>
+          <p>
+            No necesitan estar de acuerdo para leer esto. Queremos que comprendan claramente
+            qué creemos y que puedan traer sus preguntas reales a la próxima conversación.
+          </p>
+          <div class="story-grid">
+            <article class="story-step">
+              <strong>1. Creación</strong>
+              <p>
+                Dios es bueno y personal. Nos creó a su imagen para conocerle, amarle y reflejar
+                su carácter. El amor tiene su fuente en Él.
+              </p>
+            </article>
+            <article class="story-step">
+              <strong>2. Ruptura</strong>
+              <p>
+                La Biblia llama pecado a vivir lejos de Dios y colocarnos como autoridad final.
+                Esa ruptura afecta nuestra relación con Dios, con nosotros mismos y con los demás.
+              </p>
+            </article>
+            <article class="story-step">
+              <strong>3. Rescate</strong>
+              <p>
+                Jesús, el Hijo de Dios, se hizo hombre, vivió sin pecado, murió por nuestros
+                pecados y resucitó. Él hizo lo que nosotros no podíamos hacer para reconciliarnos
+                con Dios.
+              </p>
+            </article>
+            <article class="story-step">
+              <strong>4. Respuesta</strong>
+              <p>
+                El perdón y la vida nueva son un regalo, no un premio por ser religioso o buena
+                persona. Jesús invita a arrepentirnos, confiar en Él y comenzar a seguirle.
+              </p>
+            </article>
+          </div>
+
+          <h3>Lecturas breves</h3>
+          <p class="helper">
+            Lean: Romanos 3:23; Romanos 6:23; 1 Corintios 15:3–4; Efesios 2:8–9.
+            Si una palabra no se entiende, anótenla.
+          </p>
+
+          <label>
+            Resume con tus propias palabras lo que entendiste de esta historia.
+            <textarea name="gospelSummary"></textarea>
+          </label>
+          <label>
+            ¿Qué palabra, idea o afirmación necesita más explicación?
+            <textarea name="gospelQuestion"></textarea>
+          </label>
+          <label>
+            ¿Qué parte te parece más difícil de creer o aceptar, y por qué?
+            <textarea name="gospelDifficulty"></textarea>
+          </label>
+          <label>
+            Si esta historia fuera verdadera, ¿qué crees que podría cambiar en tu vida o relación?
+            <textarea name="gospelImplication"></textarea>
+          </label>
+          <label>
+            ¿Dónde dirías que estás hoy?
+            <select name="faithPosition">
+              <option value="">Selecciona la respuesta más honesta</option>
+              <option>Creo en Jesús y quiero seguirle</option>
+              <option>Estoy explorando y quiero entender más</option>
+              <option>Tengo dudas importantes</option>
+              <option>No creo esta historia</option>
+              <option>No sé todavía cómo responder</option>
+              <option>Prefiero hablarlo en persona</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="card accent">
+          <p class="section-number">Parte 5 · Juntos</p>
+          <h2>Conversación de diez minutos</h2>
+          <p>
+            Después de terminar individualmente, compartan únicamente lo que cada uno se sienta
+            preparado para compartir. Escuchen sin corregir, debatir ni intentar arreglar.
+          </p>
+          <ol>
+            <li>Cada uno comparte una esperanza y un temor.</li>
+            <li>Cada uno dice qué forma de recibir amor escogió.</li>
+            <li>El otro responde: “Lo que escucho que estás diciendo es…”.</li>
+            <li>Terminen agradeciendo una cualidad del otro.</li>
+          </ol>
+          <label>
+            Algo nuevo que comprendí acerca de mi pareja fue…
+            <textarea name="learnedPartner"></textarea>
+          </label>
+          <label>
+            Una acción concreta que acordamos practicar esta semana es…
+            <textarea name="coupleAction"></textarea>
+          </label>
+        </section>
+
+        <section class="card">
+          <p class="section-number">Parte 6 · Opcional y privada</p>
+          <h2>Lo que quisiera conversar con mi facilitador/a</h2>
+          <p>
+            No es obligatorio escribir detalles sensibles aquí. Pueden simplemente indicar el
+            tema y conversarlo en privado.
+          </p>
+          <label>
+            Pregunta, preocupación o tema privado
+            <textarea name="privateNote"></textarea>
+          </label>
+        </section>
+
+        <section class="actions" aria-label="Acciones de la tarea">
+          <button type="button" id="saveBtn">Guardar ahora</button>
+          <button type="button" id="copyBtn">Copiar respuestas</button>
+          <button type="button" id="downloadBtn" class="secondary">Descargar</button>
+          <button type="reset" class="quiet">Borrar todo</button>
+          <span class="status" id="saveStatus" role="status">Sin cambios pendientes</span>
+        </section>
+      </form>
+
+      <section class="card">
+        <h2>Vista previa de la respuesta</h2>
+        <p class="note">Revisa el contenido antes de compartirlo.</p>
+        <pre id="output"></pre>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
