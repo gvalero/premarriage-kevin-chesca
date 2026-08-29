@@ -1,31 +1,32 @@
 const form = document.querySelector("#homeworkForm");
 const output = document.querySelector("#output");
 const saveStatus = document.querySelector("#saveStatus");
+const spouseRolePrompt = document.querySelector("#spouseRolePrompt");
 const storageKey = "kevin-chesca-session-02-homework";
 
-const labels = {
-  bookHelpful: "Una idea útil o verdadera del capítulo",
-  bookQuestion: "Una afirmación que cuestiono o no entiendo",
-  bookConversation: "Una expectativa del capítulo y las responsabilidades de Efesios 5",
-  marriageChanges: "Tres cosas que creo que cambiarán al casarnos",
-  unspokenExpectations: "Expectativas que podríamos estar dando por sentadas",
-  familyModel: "Modelo de roles en mi familia",
-  familyLessons: "Una práctica familiar para repetir y una para evitar",
-  roleSources: "Fuentes de mi idea de esposo/a",
-  ownershipMap: "Mapa de responsabilidades visibles e invisibles",
-  invisibleLoad: "Responsabilidad invisible que temo cargar solo/a",
-  decisionOneCares: "Decisión cuando a uno le importa más",
-  decisionDisagree: "Decisión cuando ambos discrepan",
-  decisionNeither: "Decisión cuando ninguno quiere encargarse",
-  decisionPressure: "Decisión bajo presión",
-  easygoingReflection: "Reflexión sobre ser easygoing",
-  jesusService: "Cómo Jesús usa su posición",
-  serviceAndGrace: "Servicio sin control y gracia sin llevar cuentas",
-  faithQuestion: "Pregunta o desacuerdo espiritual",
-  sharedAlignment: "Nuestra mayor coincidencia",
-  sharedDifference: "Nuestra mayor sorpresa o diferencia",
-  twoWeekExperiment: "Nuestro experimento de dos semanas",
-};
+function getSpouseName(name) {
+  if (name === "Kevin") return "Chesca";
+  if (name === "Chesca") return "Kevin";
+  return "tu pareja";
+}
+
+function getLabels(answers) {
+  return {
+    spouseRoleReflection: `1. Reflexión sobre el rol de ${getSpouseName(answers.name)}`,
+    marriageExpectations: "2. Cambios y expectativas no expresadas",
+    invisibleResponsibility: "3. Responsabilidad visible o invisible",
+    decisionAndService: "4. Decisiones, servicio y control",
+  };
+}
+
+function updateDynamicPrompt() {
+  const spouse = getSpouseName(form.elements.name.value);
+  spouseRolePrompt.textContent =
+    `1. Pensando en el rol que el libro asigna a ${spouse}: ` +
+    "¿con qué responsabilidad estás menos de acuerdo y por qué? " +
+    "¿En cuál crees que tendrá más facilidad y en cuál podría tener más dificultad? " +
+    "Explica tus respuestas sin convertirlas en un juicio sobre su carácter.";
+}
 
 function collectAnswers() {
   const data = new FormData(form);
@@ -41,7 +42,7 @@ function formatAnswers() {
     "",
   ];
 
-  for (const [key, label] of Object.entries(labels)) {
+  for (const [key, label] of Object.entries(getLabels(answers))) {
     lines.push(`${label}:`);
     lines.push(answers[key] || "(sin respuesta)");
     lines.push("");
@@ -125,6 +126,7 @@ function downloadAnswers() {
 
 let saveTimer;
 form.addEventListener("input", () => {
+  updateDynamicPrompt();
   refreshOutput();
   saveStatus.textContent = "Guardando…";
   clearTimeout(saveTimer);
@@ -151,4 +153,5 @@ document.querySelector("#copyBtn").addEventListener("click", copyAnswers);
 document.querySelector("#downloadBtn").addEventListener("click", downloadAnswers);
 
 restoreAnswers();
+updateDynamicPrompt();
 refreshOutput();
