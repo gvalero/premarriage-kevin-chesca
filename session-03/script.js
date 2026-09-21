@@ -1,16 +1,13 @@
 const form = document.querySelector("#homeworkForm");
 const output = document.querySelector("#output");
 const saveStatus = document.querySelector("#saveStatus");
-const storageKey = "kevin-chesca-session-03-homework";
+const storageKey = "kevin-chesca-session-03-book-homework";
 
 const labels = {
   conflictResearch: "1. Investigación sobre conflicto después del matrimonio",
-  conflictPattern: "2. Mi patrón cuando una conversación se vuelve difícil",
-  sacrificeAndResentment: "3. Sacrificio genuino y resentimiento",
-  repairNeeds: "4. Lo que necesito para una reparación real",
-  practiceAndPartnerPerspective: "5. Decisión practicada y perspectiva de mi pareja",
-  commonGoodAndSafeguards: "6. Bien común, sacrificios y salvaguardas",
-  practiceReflection: "7. Evaluación de la práctica y pregunta pendiente",
+  sacrificeAndResentment: "2. Sacrificio genuino y resentimiento",
+  pauseRepairPlan: "3. Plan para pausa, regreso y reparación",
+  practiceReflection: "4. Reflexión sobre la práctica de decisión",
 };
 
 function collectAnswers() {
@@ -21,7 +18,7 @@ function collectAnswers() {
 function formatAnswers() {
   const answers = collectAnswers();
   const lines = [
-    "Kevin y Chesca — Tarea 3: Conflicto, reparación y decisiones compartidas",
+    "Kevin y Chesca — Tarea 3: Comunicación, diferencias y reparación",
     `Nombre: ${answers.name || "(sin seleccionar)"}`,
     `Exportado: ${new Date(answers.exportedAt).toLocaleString("es")}`,
     "Fecha límite: viernes 25 de septiembre de 2026",
