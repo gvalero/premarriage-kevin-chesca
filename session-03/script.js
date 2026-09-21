@@ -7,7 +7,9 @@ const labels = {
   conflictResearch: "1. Investigación sobre conflicto después del matrimonio",
   sacrificeAndResentment: "2. Sacrificio genuino y resentimiento",
   pauseRepairPlan: "3. Plan para pausa, regreso y reparación",
-  practiceReflection: "4. Reflexión sobre la práctica de decisión",
+  jesusServiceReflection: "4. Jesús, autoridad y servicio",
+  reconciliationReflection: "5. Dios, iniciativa y reconciliación",
+  practiceReflection: "6. Reflexión sobre la práctica de decisión",
 };
 
 function collectAnswers() {
